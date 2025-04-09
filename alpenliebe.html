@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mentos Zindagi Quiz</title>
+  <title>Alpenliebe Zindagi Quiz</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -108,11 +108,13 @@
     <div class="question" id="questionText">Loading...</div>
     <div class="options" id="options"></div>
 
+    <!-- Navigation buttons -->
     <div class="controls">
       <button onclick="goPrev()">Previous</button>
       <button onclick="goNext()">Next</button>
     </div>
 
+    <!-- Question number buttons -->
     <div class="nav-box" id="navBox"></div>
   </div>
 
@@ -121,7 +123,7 @@
     let currentIndex = 0;
 
     async function loadQuiz() {
-      const res = await fetch("alpenliebe_quiz.json"); // Change to alpenliebe_quiz.json in the other file
+      const res = await fetch("alpenliebe_quiz.json"); // This JSON must be in the same folder
       quizData = await res.json();
       renderNav();
       renderQuestion();
